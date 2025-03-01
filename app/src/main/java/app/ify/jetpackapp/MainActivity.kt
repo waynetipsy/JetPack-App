@@ -43,7 +43,14 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String,
              modifier: Modifier = Modifier) {
-    Column {
+    Column (
+        modifier = Modifier
+            .padding(all = 16.dp)
+            .border(6.dp, Color.Red)
+            .padding(16.dp)
+            .border(2.dp, Color.Black)
+            .padding(5.dp)
+    ){
         Text(text = "Hello Waynetipsy is here",
           color = Color.Red,
             fontSize = 48.sp,
@@ -52,7 +59,8 @@ fun Greeting(name: String,
             //fontFamily = FontFamily.Serif
             textDecoration = TextDecoration.combine(
                listOf(
-
+                   TextDecoration.LineThrough,
+                   TextDecoration.Underline
                )
             )
             )
